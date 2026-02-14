@@ -7,8 +7,9 @@ export default function Navbar() {
       <nav style={{ display: "flex", gap: "20px" }}>
       <Link href="/">Home</Link>
       <Link href="/dashboard">dashboard</Link>
-      <Link href="/about">About</Link>
       <Link href="/blog">Blog</Link>
+      <Link href="/products">Products</Link>
+      <Link href="/about">About</Link>
     </nav>
     </div>
   )
