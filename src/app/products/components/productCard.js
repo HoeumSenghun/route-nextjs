@@ -1,6 +1,13 @@
+'use client'
 
+import { useCartStore } from '@/src/store/useCartStore'
 
-export default function ProductCard({ product, className }) {
+export default function ProductCard ({ product, className }) {
+  const addToCart = useCartStore((s) => s.addToCart)
+
+  function handleAddToCart () {
+    addToCart(product)
+  }
   return (
     <div className={`group relative flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${className} p-3`}>
       {/* Image */}
@@ -30,7 +37,11 @@ export default function ProductCard({ product, className }) {
           <p className="text-lg font-semibold text-gray-900">
             ${product.price}
           </p>
-          <button className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-bold text-white hover:bg-gray-700 transition-colors">
+          <button
+            type="button"
+            onClick={handleAddToCart}
+            className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-bold text-white hover:bg-gray-700 transition-colors"
+          >
             Add to Cart
           </button>
         </div>
