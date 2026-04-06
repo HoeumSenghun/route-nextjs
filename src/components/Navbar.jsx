@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { FiUser } from "react-icons/fi";
 import { CartBadge } from "./CartBadge";
+import { UserLoginButton } from "./UserLoginButton";
 
 export default function Navbar() {
   return (
@@ -29,10 +29,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <CartBadge />
-          <div className="flex items-center gap-2 text-white transition rounded-xl duration-300 px-4 py-2">
-            <FiUser size={20} />
-            <span className="hidden sm:inline">Login</span>
-          </div>
+          <UserLoginButton />
         </div>
 
       </div>

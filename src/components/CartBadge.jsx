@@ -24,7 +24,7 @@ export function CartBadge () {
       <FiShoppingCart size={20} />
       <span className="hidden sm:inline">Cart</span>
       {displayCount > 0 && (
-        <span className="absolute -top-0.5 -right-0.5 min-w-[1.125rem] h-[1.125rem] flex items-center justify-center rounded-full bg-amber-500 text-[10px] font-bold text-gray-900 px-1">
+        <span className="absolute -top-0.5 -right-0.5 min-w-4.5 h-4.5 flex items-center justify-center rounded-full bg-amber-500 text-[10px] font-bold text-gray-900 px-1">
           {displayCount > 99 ? '99+' : displayCount}
         </span>
       )}
