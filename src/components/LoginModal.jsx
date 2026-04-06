@@ -57,7 +57,7 @@ export default function LoginModal ({ isOpen, onClose }) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+            className="rounded-lg p-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-800 cursor-pointer"
             aria-label="Close"
           >
             <span className="text-xl leading-none" aria-hidden>×</span>
@@ -77,7 +77,7 @@ export default function LoginModal ({ isOpen, onClose }) {
               onChange={handleChange}
               autoComplete="email"
               placeholder="you@email.com"
-              className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition duration-150"
+              className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-gray-500 focus:ring-2 focus:ring-gray-100 transition duration-150"
             />
           </div>
           <div>
@@ -85,7 +85,7 @@ export default function LoginModal ({ isOpen, onClose }) {
               <label htmlFor="login-password" className="text-sm font-medium text-gray-700">
                 Password
               </label>
-              <span className="text-xs text-blue-600">Forgot password?</span>
+              <span className="text-xs text-gray-600 cursor-pointer">Forgot password?</span>
             </div>
             <input
               id="login-password"
@@ -95,20 +95,20 @@ export default function LoginModal ({ isOpen, onClose }) {
               onChange={handleChange}
               autoComplete="current-password"
               placeholder="••••••••"
-              className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition duration-150"
+              className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-gray-500 focus:ring-2 focus:ring-gray-100 transition duration-150"
             />
           </div>
           <div className="flex gap-3 pt-2">
             <button
               type="submit"
-              className="flex-1 rounded-lg bg-blue-600 py-2.5 text-sm font-medium text-white hover:bg-blue-700 active:scale-[0.98] transition duration-150"
+              className="flex-1 rounded-lg bg-gray-600 py-2.5 text-sm font-medium text-white hover:bg-gray-700 active:scale-[0.98] transition duration-150 cursor-pointer"
             >
               Sign in
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 rounded-lg border border-gray-300 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 active:scale-[0.98] transition duration-150"
+              className="flex-1 rounded-lg border border-gray-300 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 active:scale-[0.98] transition duration-150 cursor-pointer"
             >
               Cancel
             </button>
@@ -116,7 +116,7 @@ export default function LoginModal ({ isOpen, onClose }) {
         </form>
         <p className="mt-6 text-center text-sm text-gray-500">
           Do not have an account?{' '}
-          <span className="font-medium text-blue-600">Sign up</span>
+          <span className="font-medium text-black-600 cursor-pointer">Sign up</span>
         </p>
       </div>
     </div>
