@@ -29,6 +29,29 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Deploy on Cloudflare Workers
+
+This app uses [@opennextjs/cloudflare](https://opennext.js.org/cloudflare). In Cloudflare **Workers Builds** (or Pages with Workers deploy), set:
+
+| Setting | Value |
+|--------|--------|
+| **Build command** | `npm run build:cloudflare` |
+| **Deploy command** | `npx wrangler deploy` |
+
+Do **not** use `npm run build` alone for Workers deploy — that only runs `next build` and skips the OpenNext bundle (`.open-next/`).
+
+`wrangler.jsonc` sets the worker name to `nextapp` and matches `WORKER_SELF_REFERENCE` (fixes “Worker 'nextapp' which was not found”).
+
+### Environment variables
+
+In **Settings → Environment variables** (Production and Preview):
+
+```
+NEXT_PUBLIC_API_BASE_URL=https://fakestoreapi.com
+```
+
+If unset, the app defaults to `https://fakestoreapi.com` at build and runtime.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
